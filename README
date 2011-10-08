@@ -10,3 +10,6 @@ Uses HTML5 elements such as <menu> and <nav>.
 <head> and <body> elements are assumed and not required.
 CSS references at the top of the document.
 Script references at the bottom of the document.
+
+JS Notes:
+Not sure if an object + method approach is best here, but I figured it best to bind all actions off a menu object.
