@@ -13,25 +13,37 @@
 	{
 		"id": "nav-1",
 		"label": "Home",
-		"href": "/",
-		"parent": null
+		"href": "/"
 	},
 	{
 		"id": "nav-2",
-		"label": "Our mission",
-		"href": "",
-		"parent": null
+		"label": "Our work"
 	},
 	{
 		"id": "nav-3",
 		"label": "About us",
-		"href": "/about",
-		"parent": null
+		"href": "/about"
 	},
 	{
 		"id": "nav-4",
 		"label": "Contact us",
-		"href": "/contact",
-		"parent": null
+		"href": "/contact"
+	},
+	{
+		"id": "nav-5",
+		"label": "Web Design",
+		"href": "/work/web-design",
+		"parent": "nav-2"
+	},
+	{
+		"id": "nav-6",
+		"label": "User Testing",
+		"href": "/work/user-testing",
+		"parent": "nav-2"
+	},
+	{
+		"id": "nav-7",
+		"label": "Blog",
+		"href": "/blog"
 	}
 ]}

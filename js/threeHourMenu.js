@@ -30,6 +30,7 @@ var menu = {
 		var nav = document.getElementById("dynanav");
 		var html_output = document.createElement("menu");
 		html_output.setAttribute('id', "dynamenu");
+		nav.appendChild(html_output);
 		var nav_menu = document.getElementById("dynamenu");
 		for (var i = 0; i < items_len; i++){
 			var item_html = document.createElement("li");
@@ -46,9 +47,18 @@ var menu = {
 				span.appendChild(span_text);
 				item_html.appendChild(span);
 			}
-			html_output.appendChild(item_html);
+			if (items[i].parent){
+				var target_parent = document.getElementById(items[i].parent);
+				if (!target_parent.getAttribute("class")){
+					target_parent.setAttribute("class", "parent");
+					var submenu = document.createElement("menu");
+					target_parent.appendChild(submenu);
+				}
+				target_parent.childNodes[1].appendChild(item_html);
+			}else{
+				nav_menu.appendChild(item_html);
+			}
 		}
-		nav.appendChild(html_output);
 	},
 	init: function(){
 		// Set configuration, Get menu data, etc
