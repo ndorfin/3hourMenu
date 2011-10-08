@@ -1,0 +1,5 @@
+An attempt at a multi-tiered JSON-powered menu in under 3 hours.
+
+Notes:
+Only intended to work in standards-compliant browsers such as Firefox 6 and Chrome edge.
+No use of frameworks such as jQuery (The pressure!)
