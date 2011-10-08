@@ -5,7 +5,7 @@ var log = function(obj){
 };
 var menu = {
 	data: null,
-/*
+/* I wanted to use some sort of predefined builder here, but then I realised I was thinking in jQuery terms, not JS :)
 	builder: {
 		label: "<span></span>",
 		link: "<a></a>",
@@ -15,14 +15,12 @@ var menu = {
 */
 	get_menu_data: function(){
 		// open XHR and load the JSON
-		// log("menu.get_menu_data called");
 		var xhr = new XMLHttpRequest();
-		xhr.open("GET", "../json/menu.json", false);
-		xhr.send(null);
+		xhr.open("GET", "/json/menu.json", false); // Adjust the path here based on your webserver webroot.
+		xhr.send(null); // This doesn't work when being run off the file-system.  Not sure if there's a way to correct this since there's a security policy at play here
 		if (xhr.status == 200 || xhr.status == 0){
 			menu.data = eval("(" + xhr.responseText + ")"); // This will need to be parsed for bad characters, HTML, etc before the eval.
 		}
-		// log(menu.data);
 	},
 	render_menu: function(){
 		var items = menu.data.items;
@@ -35,7 +33,7 @@ var menu = {
 		for (var i = 0; i < items_len; i++){
 			var item_html = document.createElement("li");
 			item_html.setAttribute("id", items[i].id);
-			if (items[i].href){
+			if (items[i].href){ // It feels like theres a lot of unnecessary repetition here between anchor and span.
 				var anchor = document.createElement("a")
 				anchor.setAttribute("href", items[i].href);
 				var anchor_text = document.createTextNode(items[i].label);
@@ -54,7 +52,7 @@ var menu = {
 					var submenu = document.createElement("menu");
 					target_parent.appendChild(submenu);
 				}
-				target_parent.childNodes[1].appendChild(item_html);
+				target_parent.childNodes[1].appendChild(item_html); // Assumes <menu> would always be the second child node - not ideal.
 			}else{
 				nav_menu.appendChild(item_html);
 			}

@@ -1,15 +1,24 @@
 An attempt at a multi-tiered JSON-powered menu in under 3 hours.
 
-Notes:
-Only intended to work in standards-compliant browsers such as Firefox 6 and Chrome edge.
-No use of frameworks such as jQuery (The pressure!)
+Requirements:
+ - Only intended to work in standards-compliant browsers such as Firefox 6 and Chrome edge.
+ - No use of frameworks such as jQuery (The pressure!)
 
+Implementation notes:
+HTML:
+ - Uses HTML5 elements such as <menu> and <nav>.
+ - <head> and <body> elements are assumed and not required.
+ - CSS references at the top of the document.
+ - Script references at the bottom of the document.
 
-HTML Notes:
-Uses HTML5 elements such as <menu> and <nav>.
-<head> and <body> elements are assumed and not required.
-CSS references at the top of the document.
-Script references at the bottom of the document.
+JS:
+ - Not sure if an object + method approach is best here, but I figured it best to bind all actions off a menu object.
+ - I'm sure there must be a cleaner way of traversing the menu items.  render_menu needs a good clean-up.
+ - I'm worried about all the DOM fiddling and the performance costs there, would it be quicker to just create a long string of nodes, and then append that as an HTML node to the <nav>?
 
-JS Notes:
-Not sure if an object + method approach is best here, but I figured it best to bind all actions off a menu object.
+CSS:
+ - I used CSS to handle the menu item interaction, such as hover interactions, and displaying of submenus.
+
+Bugs:
+ - I couldn't get XMLHTTPRequest to work when the client is running the page off the file-system and not through a webserver.
+ - This solution won't scale well beyond 5 tiers of menu items, or if the root parent is flush-right with the edge of the viewport.  Submenus will be obscured by the end of the viewport.  To correct this I'd need to not use CSS for the submenu display functionality, and move that into the JS.  Then the JS would have to find out if the menu is near an edge and switch orientation.
