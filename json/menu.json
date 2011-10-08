@@ -1,5 +1,5 @@
 /* Menu data should look something like this: 
-{"menu": [
+{"items": [
 	{
 		"id": "", // Unique identifier for each menu item.
 		"label": "", // Text label for the menu item
@@ -9,7 +9,7 @@
 ]}
 */
 
-{"menu": [
+{"items": [
 	{
 		"id": "nav-1",
 		"label": "Home",
@@ -19,7 +19,7 @@
 	{
 		"id": "nav-2",
 		"label": "Our mission",
-		"href": "/mission",
+		"href": "",
 		"parent": null
 	},
 	{
