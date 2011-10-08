@@ -1,0 +1,37 @@
+/* Menu data should look something like this: 
+{"menu": [
+	{
+		"id": "", // Unique identifier for each menu item.
+		"label": "", // Text label for the menu item
+		"href": "", // If its a link, it should have an href.  Empty if not a link.
+		"parent": "" // If its a child node, we'll need to know which node to pin it too.  null if none.
+	}
+]}
+*/
+
+{"menu": [
+	{
+		"id": "nav-1",
+		"label": "Home",
+		"href": "/",
+		"parent": null
+	},
+	{
+		"id": "nav-2",
+		"label": "Our mission",
+		"href": "/mission",
+		"parent": null
+	},
+	{
+		"id": "nav-3",
+		"label": "About us",
+		"href": "/about",
+		"parent": null
+	},
+	{
+		"id": "nav-4",
+		"label": "Contact us",
+		"href": "/contact",
+		"parent": null
+	}
+]}

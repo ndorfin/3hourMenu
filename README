@@ -3,3 +3,10 @@ An attempt at a multi-tiered JSON-powered menu in under 3 hours.
 Notes:
 Only intended to work in standards-compliant browsers such as Firefox 6 and Chrome edge.
 No use of frameworks such as jQuery (The pressure!)
+
+
+HTML Notes:
+Uses HTML5 elements such as <menu> and <nav>.
+<head> and <body> elements are assumed and not required.
+CSS references at the top of the document.
+Script references at the bottom of the document.
