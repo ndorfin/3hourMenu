@@ -5,20 +5,23 @@ menu {list-style:none; margin:0; padding:0;}
 li {list-style:none; margin:0; padding:0;}
 /* Element tree */
 body > h1 { width:960px; margin:.5em auto;}
-body > nav {background:#eee; }
+body > nav {background:#eee; padding:0;}
 	nav > menu {display:block; width:960px; margin:0 auto;}
 		li {display:block; float:left; position:relative; min-width:6em;}
 			li > span,
 			li > a {display:block; padding:.5em; background:#eee; text-decoration:none; color:#000;}
 			li:hover > span,
-			li:hover > a {background-color:#ddd; color:#333;}
+			li:hover > a {background-color:#e5e5e5; color:#333;}
+			li:hover > menu {box-shadow:2px 2px 5px rgba(0,0,0,.2);}
 			li.parent > span, 
-			li.parent > a {color:#c333}
-		nav > menu > li {margin-left:.1em;}
+			li.parent > a {color:#c333; background-image:url("img/bg_toggle_down.png"); background-position:.5em 50%; background-repeat:no-repeat; padding-left:1.5em}
+			li li.parent > span, 
+			li li.parent > a {background-image:url("img/bg_toggle_right.png"); background-position:95% 50%; padding-left:.5em; padding-right:1.5em}
+		nav > menu > li {margin-left:1em; background:#ddd;}
 		nav > menu > li:first-child {margin-left:0;}
-			nav > menu > li > menu {position:absolute; top:2.5em; left:-999em;}
+			nav > menu > li > menu {position:absolute; top:2.95em; left:-999em; font-size:85%;}
 			nav > menu > li:hover > menu {left:auto;}
 				li li {float:none; min-width:10em;}
 					li li > menu {position:absolute; left:-999em; top:0;}
-					li li:hover > menu {left:10em; z-index:2; box-shadow:2px 2px 5px rgba(0,0,0,.2);}
+					li li:hover > menu {left:10em; z-index:2;}
 	nav > menu:after {content:"."; display:block; height:0; visibility:hidden; clear:left;}
