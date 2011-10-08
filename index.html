@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+	<link rel="stylesheet" href="css/screen.css">
 	<h1>3-hour menu</h1>
 	<nav id="dynanav">
 		<menu>
-			<li><a href="#">First</a>
+			<li class="parent"><a href="#">First</a>
 				<menu>
 					<li><a href="#">1.1</a></li>
 					<li><a href="#">1.2</a></li>
 				</menu>
 			</li>
-			<li><span>Second</span>
+			<li class="parent"><span>Second</span>
 				<menu>
 					<li><a href="#">2.1</a></li>
 					<li><span>2.2 label</span></li>
 					<li><a href="#">2.3</a></li>
-					<li><span href="#">2.4</span>
+					<li class="parent"><span href="#">2.4</span>
 						<menu>
 							<li><a href="#">2.4.1</a></li>
-							<li><a href="#">2.4.2</a></li>
+							<li class="parent"><a href="#">2.4.2</a>
+								<menu>
+									<li><a href="#">2.4.2.1</a></li>
+									<li><a href="#">2.4.2.2</a></li>
+									<li><a href="#">2.4.2.3</a></li>
+								</menu>
+							</li>
 							<li><a href="#">2.4.3</a></li>
 							<li><a href="#">2.4.4</a></li>
 						</menu>
@@ -25,10 +32,18 @@
 				</menu>
 			</li>
 			<li><a href="#">Third</a></li>
-			<li><a href="#">Fourth</a>
-				<li><a href="#">4.1</a></li>
-				<li><a href="#">4.2</a></li>
-				<li><a href="#">5.3</a></li>
+			<li class="parent"><a href="#">Fourth</a>
+				<menu>
+					<li class="parent"><a href="#">4.1</a>
+						<menu>
+							<li><a href="#">4.1.1</a></li>
+							<li><a href="#">4.1.2</a></li>
+							<li><a href="#">4.1.3</a></li>
+						</menu>
+					</li>
+					<li><a href="#">4.2</a></li>
+					<li><a href="#">4.3</a></li>
+				</menu>
 			</li>
 		</menu>
 	</nav>
