@@ -3,8 +3,8 @@
 	{
 		"id": "", // Unique identifier for each menu item.
 		"label": "", // Text label for the menu item
-		"href": "", // If its a link, it should have an href.  Empty if not a link.
-		"parent": "" // If its a child node, we'll need to know which node to pin it too.  null if none.
+		"href": "", // If its a link, it should have an href.  Remove if not a link.
+		"parent": "" // If its a child node, we'll need to know which node to pin it too.  Remove if root node.
 	}
 ]}
 */
@@ -37,13 +37,55 @@
 	},
 	{
 		"id": "nav-6",
-		"label": "User Testing",
-		"href": "/work/user-testing",
+		"label": "User Experience Design",
+		"href": "/work/ux-design",
 		"parent": "nav-2"
 	},
 	{
 		"id": "nav-7",
 		"label": "Blog",
 		"href": "/blog"
+	},
+	{
+		"id": "nav-8",
+		"label": "User Testing",
+		"href": "/work/ux-design/user-testing",
+		"parent": "nav-6"
+	},
+	{
+		"id": "nav-9",
+		"label": "Surveying",
+		"href": "/work/ux-design/surveying",
+		"parent": "nav-6"
+	},
+	{
+		"id": "nav-10",
+		"label": "Ethnographic research",
+		"href": "/work/ux-design/ethnography",
+		"parent": "nav-6"
+	},
+	{
+		"id": "nav-11",
+		"label": "User Test Scheduling",
+		"href": "/work/ux-design/user-testing/scheduling",
+		"parent": "nav-8"
+	},
+	{
+		"id": "nav-12",
+		"label": "Conducting User Tests",
+		"href": "/work/ux-design/user-testing/conducting",
+		"parent": "nav-8"
+	},
+	{
+		"id": "nav-13",
+		"label": "Our team",
+		"href": "/about/our-team",
+		"parent": "nav-3"
+	},
+	{
+		"id": "nav-14",
+		"label": "Our mission",
+		"href": "/about/our-mission",
+		"parent": "nav-3"
 	}
 ]}

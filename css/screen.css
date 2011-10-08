@@ -1,19 +1,24 @@
 /* General CSS properites */
+body {font:100%/1.5 Arial, sans-serif; margin:0;}
 nav {}
-	menu {list-style:none; margin:0; padding:0;}
-		li {list-style:none; margin:0; padding:0;}
-
+menu {list-style:none; margin:0; padding:0;}
+li {list-style:none; margin:0; padding:0;}
 /* Element tree */
-body {}
-	body > nav {}
-		nav > menu {display:block;}
-			li {display:block; float:left; position:relative; min-width:6em;}
+body > h1 { width:960px; margin:.5em auto;}
+body > nav {background:#eee; }
+	nav > menu {display:block; width:960px; margin:0 auto;}
+		li {display:block; float:left; position:relative; min-width:6em;}
 			li > span,
-			li > a {display:block; padding:.5em; background:#eee;}
+			li > a {display:block; padding:.5em; background:#eee; text-decoration:none; color:#000;}
+			li:hover > span,
+			li:hover > a {background-color:#ddd; color:#333;}
 			li.parent > span, 
-			li.parent > a {background:#fdd;}
-				nav > menu > li > menu {position:absolute; top:2em; left:-999em;}
-				nav > menu > li:hover > menu {left:auto;}
-					li li {float:none;}
-						li li > menu {position:absolute; left:-999em; top:0}
-						li li:hover > menu {left:6em;}
+			li.parent > a {color:#c333}
+		nav > menu > li {margin-left:.1em;}
+		nav > menu > li:first-child {margin-left:0;}
+			nav > menu > li > menu {position:absolute; top:2.5em; left:-999em;}
+			nav > menu > li:hover > menu {left:auto;}
+				li li {float:none; min-width:10em;}
+					li li > menu {position:absolute; left:-999em; top:0;}
+					li li:hover > menu {left:10em; z-index:2; box-shadow:2px 2px 5px rgba(0,0,0,.2);}
+	nav > menu:after {content:"."; display:block; height:0; visibility:hidden; clear:left;}
